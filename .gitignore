@@ -1,0 +1,10 @@
+### Java ###
+.idea/
+*.iml
+target/
+out/
+*.mvn
+mvnw
+mvnw.cmd
+
+application-prod.yml

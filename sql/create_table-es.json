@@ -1,0 +1,58 @@
+PUT t_company_detail_new
+{
+  "aliases": {
+    "company_detail_new": {}
+  },
+  "mappings": {
+    "properties": {
+      "company_name": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 32
+          }
+        }
+      },
+      "territory": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 32
+          }
+        }
+      },
+      "category": {
+        "type": "text",
+        "analyzer": "ik_max_word",
+        "search_analyzer": "ik_smart",
+        "fields": {
+          "keyword": {
+            "type": "keyword",
+            "ignore_above": 32
+          }
+        }
+      },
+      "company_profile": {
+        "type": "text"
+      },
+      "recruitment": {
+        "type": "text"
+      },
+      "create_time": {
+        "type": "date"
+      },
+      "update_time": {
+        "type": "date"
+      },
+      "is_delete": {
+        "type": "keyword"
+      }
+    }
+  }
+}

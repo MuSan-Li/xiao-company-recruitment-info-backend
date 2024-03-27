@@ -1,0 +1,43 @@
+server:
+  address: 0.0.0.0
+  port: 8120
+  servlet:
+    context-path: /api
+    session:
+      cookie:
+        max-age: 86400
+
+logging:
+  level:
+    org.elasticsearch.client: DEBUG
+
+spring:
+  session:
+    store-type: redis
+    timeout: 86400
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/my_db
+    username: root
+    password: root
+  redis:
+    database: 10
+    host: localhost
+    port: 6379
+    timeout: 5000
+    password:
+  elasticsearch:
+    uris: http://localhost:9200
+    username:
+    password:
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+cos:
+  client:
+    accessKey: xxx
+    secretKey: xxx
+    region: xxx
+    bucket: xxx
